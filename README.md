@@ -1,20 +1,9 @@
 
-Progress Button Styles
+Dev environment
 =========
 
-A set of flat and 3D progress button styles where the button itself serves as a progress indicator. 3D styles are used for showing the progress indication on one side of the button while rotating the button in perspective.
-
-[Article on Codrops](http://tympanus.net/codrops/?p=17809)
-
-[Demo](http://tympanus.net/Development/ProgressButtonStyles/)
-
-Integrate or build upon it for free in your personal or commercial projects. Don't republish, redistribute or sell "as-is". 
-
-Read more here: [License](http://tympanus.net/codrops/licensing/)
-
-
-[© Codrops 2013](http://www.codrops.com)
-
-refference: 'https://developers.google.com/sheets/api/quickstart/js'
+This is a proggressive application i made to help and automate usage of developer test enviroment on an agile or any other methodology
  
- command to run locally :  python -m SimpleHTTPServer 8000
+ cd into directory and command to run locally :  python -m SimpleHTTPServer 8000
+
+ 
