@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Wildcards</title>
+		<meta name="description" content="Progress Button Styles: Creative effects for loading buttons" />
+		<meta name="keywords" content="progress button, loading button, 3d, loading indicator, progress indicator" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Top Navigation -->
+			<div class="codrops-top clearfix">
+				
+				<span ><a class="codrops-icon codrops-icon-drop" href="https://docs.google.com/spreadsheets/d/18vbikq7Q7OxkvlbZrEDkq0_upuf8aaG7WTNDBwzjKEQ/edit"><span>See Google Doc</span></a></span>
+				<span class="right" > 
+					<img id="dpic" src="" alt="Display Picture"> 	
+					<span class="right" id="userinfo" >
+						<p id="username" class="username"></p>  
+						<p id="email" class="email"></p>
+
+						<div class ="auth-btn"  id ="auth-btn">
+							<button id="authorize_button"  style="display: block;">Authorize</button>
+							<button id="signout_button" style="display: none;"> <a href="index.html"></a> Sign Out</button>
+						</div>
+
+					</span> 
+				</span>
+			
+
+			</div>
+			<header>
+                <h1>The WildCards <span><a href="index.html">Environment Board</a></span></h1>
+				<p class="note">Please ensure <em>that you keep this</em> Updated at all times</p></header>
+            
+            <div class="wrapper">
+				<section>
+					<h4 id="account_id" ></h4>
+					<h2 id="account_dev"></h2>
+					<button class="progress-button" id ="editbtn" data-style="fill" data-horizontal>Account</button>
+				</section>
+				<section>
+					<h4 id="assets_id" ></h4>
+                    <h2 id="assets_dev"> </h2>
+					<button class="progress-button"  id ="editbtn" data-style="fill" data-horizontal>Assets</button>
+				</section>
+				<section>
+					<h4 id="catalog_id" ></h4>
+                    <h2 id="catalog_dev"></h2>
+					<button class="progress-button"  id ="editbtn" data-style="fill" data-horizontal>Catalog</button>
+				</section>
+				<section>
+					<h4 id="checkout_id" ></h4>
+                    <h2 id="checkout_dev"></h2>
+					<button class="progress-button"  id ="editbtn" data-style="fill" data-horizontal>Checkout</button>
+				</section>
+				
+			</div>
+			<div class="wrapper">
+				<section>
+					<h4 id="magento_id" ></h4>
+					<h2 id="magento_dev"> </h2>
+					<button class="progress-button"  id ="editbtn" data-style="rotate-angle-bottom" data-perspective data-horizontal>Magento</button>
+				</section>
+				<section>
+					<h4 id="newsletter_id" ></h4>
+                    <h2 id="newsletter_dev"></h2>
+					<button class="progress-button"  id ="editbtn" data-style="rotate-angle-top" data-perspective data-horizontal>Newsletters</button>
+				</section>
+				
+			</div>
+			
+			
+		</div><!-- /container -->
+
+		<p>Google Sheets API Quickstart</p>
+
+		<script src="node_modules/x0popup/src/js/x0popup.js"></script>
+		<link rel="stylesheet" href="node_modules/x0popup/src/css/x0popup.css">
+		<link rel="stylesheet" href="node_modules/x0popup/src/css/x0popup.default.css">
+
+
+		
+		<script src="js/dev.js"></script>
+		<script async defer src="https://apis.google.com/js/api.js"
+			onload="this.onload=function(){};handleClientLoad()"
+			onreadystatechange="if (this.readyState === 'complete') this.onload()">
+	   </script>
+
+		<script src="js/classie.js"></script>
+		<script src="js/progressButton.js"></script>
+		<script>
+			[].slice.call( document.querySelectorAll( 'button.progress-button' ) ).forEach( function( bttn ) {
+				new ProgressButton( bttn, {
+					callback : function( instance ) {
+						var progress = 0,
+							interval = setInterval( function() {
+								progress = Math.min( progress + Math.random() * 0.1, 1 );
+								instance._setProgress( progress );
+								if( progress === 1 ) {
+									instance._stop(1);
+									clearInterval(interval);
+								}
+							}, 200 );
+					}
+				} );
+			} );
+		</script>
+		
+		
+	</body>
+</html>

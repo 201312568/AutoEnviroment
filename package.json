@@ -1,0 +1,14 @@
+{
+  "name": "devs",
+  "version": "1.0.0",
+  "description": "wildcards enviroment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Themba Msiza",
+  "license": "ISC",
+  "dependencies": {
+    "x0popup": "^0.3.3"
+  }
+}
